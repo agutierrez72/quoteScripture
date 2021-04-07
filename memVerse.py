@@ -14,6 +14,10 @@ class Memory_Verse:
                 print(self.verse)
                 print
 
+def printList(sz, list):
+        """This function prints the verses in the list"""
+        for x in range(0, sz):
+                list[x].myfunc()
 
 def start():
         """This function initializes a list of verses by adding the first verse"""
@@ -66,8 +70,6 @@ def addScripture(sz, list):
 
 list = start()
 size = addScripture(1, list)
-for x in range(0, size):
-        list[x].myfunc()
+printList(size, list)
 size = addScripture(size, list)
-for x in range(0, size):
-        list[x].myfunc()
+printList(size, list)
